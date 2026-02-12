@@ -3,6 +3,7 @@
 import { motion } from 'motion/react';
 import { Code2, Rocket, Lightbulb } from 'lucide-react';
 import { useLanguage } from '@/app/contexts/LanguageContext';
+import  profile from '@/app/assets/profile.jpeg';
 
 export function About() {
   const { t } = useLanguage();
@@ -53,8 +54,11 @@ export function About() {
               <p className="text-lg text-slate-700 dark:text-slate-300 mb-6">
                 {t('about.p2')}
               </p>
-              <p className="text-lg text-slate-700 dark:text-slate-300">
+              <p className="text-lg text-slate-700 dark:text-slate-300 mb-6">
                 {t('about.p3')}
+              </p>
+              <p className="text-lg text-slate-700 dark:text-slate-300">
+                {t('about.p4')}
               </p>
             </motion.div>
 
@@ -67,8 +71,8 @@ export function About() {
             >
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1660810731526-0720827cbd38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMGRldmVsb3BlciUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3Njg1MjM3MDh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="Developer workspace"
+                  src={profile.src}
+                  alt="William Profile"
                   className="w-full h-full object-cover"
                 />
               </div>

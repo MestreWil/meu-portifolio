@@ -22,21 +22,22 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero
     'hero.title1': 'William Tavares de Moura',
     'hero.title2': 'Software Developer',
-    'hero.subtitle': 'Developing high-performance web applications using PHP, React, Next.js, SQL and clean architecture principles.',
+    'hero.subtitle': 'Transforming complex problems into modern web applications using Laravel, CodeIgniter, React, Django, JavaScript, TypeScript and Docker.',
     'hero.viewWork': 'View Projects',
     'hero.contact': 'Contact Me',
     
     // About
     'about.title': 'About Me',
     'about.professional': 'Professional',
-    'about.professionalDesc': 'Writing clean, maintainable code with industry best practices and attention to detail',
+    'about.professionalDesc': 'Software development with a focus on clean, sustainable code aligned with industry best practices, always with high standards of quality and attention to detail',
     'about.innovation': 'Innovation',
-    'about.innovationDesc': 'Leveraging cutting-edge technologies to build future-ready applications',
+    'about.innovationDesc': 'Strategic application of modern technologies to build robust, scalable, and future-proof solutions',
     'about.creative': 'Creative',
     'about.creativeDesc': 'Thinking outside the box to solve complex problems with elegant solutions',
-    'about.p1': "I'm a passionate software developer dedicated to crafting exceptional digital experiences. With a strong foundation in modern web technologies and a keen eye for design, I bridge the gap between functionality and aesthetics.",
-    'about.p2': "My approach combines technical expertise with creative problem-solving, ensuring every project is not just built well, but built right. I'm constantly learning, adapting, and pushing the boundaries of what's possible in software development.",
-    'about.p3': "Whether it's architecting scalable backend systems or designing pixel-perfect user interfaces, I bring professionalism, innovation, and creativity to every line of code.",
+    'about.p1': "I'm a software developer focused on creating digital solutions that solve real problems and deliver value to people and businesses. Throughout my journey, I've built a strong foundation in web systems development, working on projects for the financial market, industrial property market, internal platforms, and management systems, always with attention to quality, performance, and scalability.",
+    'about.p2': "Graduated in Systems Analysis and Development from Centro Universitário UNISENAC RS in 2025, which provided me with a structured view of architecture, best practices, and software engineering, while practical experience consolidated my ability to transform complex requirements into clear, functional, and well-architected solutions.",
+    'about.p3': "I like to understand the problem before writing the first line of code. I believe quality software is born from the combination of planning, communication, and consistent technical execution. Therefore, I strive to develop clean, organized, and easy-to-evolve applications.",
+    'about.p4': "I'm committed to continuous improvement, staying updated with the latest industry trends, and delivering solutions that exceed expectations.",
     
     // Skills
     'skills.title': 'Skills & Expertise',
@@ -125,21 +126,22 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero
     'hero.title1': 'William Tavares de Moura',
     'hero.title2': 'Desenvolvedor de Software',
-    'hero.subtitle': 'Desenvolvendo aplicações web de alto desempenho utilizando PHP, React, Next.js, SQL e princípios de arquitetura limpa.',
+    'hero.subtitle': 'Transformo problemas complexos em aplicações web modernas, utilizando Laravel, CodeIgniter, React, Django, JavaScript, TypeScript e Docker.',
     'hero.viewWork': 'Ver Projetos',
     'hero.contact': 'Entrar em Contato',
     
     // About
     'about.title': 'Sobre Mim',
     'about.professional': 'Profissional',
-    'about.professionalDesc': 'Escrevendo código limpo e sustentável com as melhores práticas da indústria e atenção aos detalhes',
+    'about.professionalDesc': 'Desenvolvimento de software com foco em código limpo, sustentável e alinhado às melhores práticas da indústria, sempre com alto padrão de qualidade e atenção aos detalhes.',
     'about.innovation': 'Inovação',
-    'about.innovationDesc': 'Aproveitando tecnologias de ponta para construir aplicações preparadas para o futuro',
+    'about.innovationDesc': 'Aplicação estratégica de tecnologias modernas para criar soluções robustas, escaláveis e preparadas para o futuro.',
     'about.creative': 'Criativo',
-    'about.creativeDesc': 'Pensando fora da caixa para resolver problemas complexos com soluções elegantes',
-    'about.p1': 'Sou um desenvolvedor de software apaixonado dedicado a criar experiências digitais excepcionais. Com uma base sólida em tecnologias web modernas e um olhar atento ao design, faço a ponte entre funcionalidade e estética.',
-    'about.p2': 'Minha abordagem combina expertise técnica com resolução criativa de problemas, garantindo que cada projeto não seja apenas bem construído, mas construído corretamente. Estou constantemente aprendendo, me adaptando e empurrando os limites do que é possível no desenvolvimento de software.',
-    'about.p3': 'Seja arquitetando sistemas backend escaláveis ou projetando interfaces de usuário pixel-perfect, trago profissionalismo, inovação e criatividade a cada linha de código.',
+    'about.creativeDesc': 'Resolução de problemas complexos por meio de abordagens inteligentes e soluções elegantes.',
+    'about.p1': 'Sou desenvolvedor de software focado em criar soluções digitais que resolvem problemas reais e geram valor para pessoas e negócios. Ao longo da minha trajetória, construí uma base sólida em desenvolvimento de sistemas web, atuando em projetos para o mercado financeiro, para o mercado de propriedade industrial, plataformas internas e sistemas de gestão, sempre com atenção à qualidade, desempenho e escalabilidade.',
+    'about.p2': 'Me formei em Análise e Desenvolvimento de Sistemas no Centro Universitário UNISENAC RS em 2025, o que me proporcionou uma visão estruturada sobre arquitetura, boas práticas e engenharia de software, enquanto a experiência prática consolidou minha capacidade de transformar requisitos complexos em soluções claras, funcionais e bem arquitetadas.',
+    'about.p3': 'Gosto de entender o problema antes de escrever a primeira linha de código. Acredito que software de qualidade nasce da combinação entre planejamento, comunicação e execução técnica consistente. Por isso, busco desenvolver aplicações limpas, organizadas e fáceis de evoluir.',
+    'about.p4': 'Seja no backend, construindo APIs e regras de negócio robustas, ou no frontend, criando interfaces modernas e intuitivas, atuo com profissionalismo, senso de responsabilidade e compromisso com entregas que realmente fazem a diferença para o cliente.',
     
     // Skills
     'skills.title': 'Habilidades & Expertise',

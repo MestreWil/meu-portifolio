@@ -2,7 +2,6 @@
 
 import { motion } from 'motion/react';
 import { ChevronDown } from 'lucide-react';
-import  profile from '@/app/assets/profile.jpeg';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 
 
@@ -52,9 +51,6 @@ export function Hero() {
               transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
               className="inline-block mb-6"
             >
-              <div className="w-40 h-40 mx-auto rounded-2xl overflow-hidden shadow-2xl">
-                <img src={profile.src} alt="William Profile" className="w-full h-full object-cover" />
-              </div>
             </motion.div>
 
             <h1 className="text-5xl md:text-7xl text-white mb-6">
