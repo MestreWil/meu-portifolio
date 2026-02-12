@@ -20,11 +20,11 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.contact': 'Contact',
     
     // Hero
-    'hero.title1': 'Creative Developer',
-    'hero.title2': 'Building Digital Excellence',
-    'hero.subtitle': 'Transforming ideas into innovative, scalable solutions with cutting-edge technology and creative problem-solving',
-    'hero.viewWork': 'View My Work',
-    'hero.contact': 'Get In Touch',
+    'hero.title1': 'William Tavares de Moura',
+    'hero.title2': 'Software Developer',
+    'hero.subtitle': 'Developing high-performance web applications using PHP, React, Next.js, SQL and clean architecture principles.',
+    'hero.viewWork': 'View Projects',
+    'hero.contact': 'Contact Me',
     
     // About
     'about.title': 'About Me',
@@ -123,10 +123,10 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.contact': 'Contato',
     
     // Hero
-    'hero.title1': 'Desenvolvedor Criativo',
-    'hero.title2': 'Construindo Excelência Digital',
-    'hero.subtitle': 'Transformando ideias em soluções inovadoras e escaláveis com tecnologia de ponta e resolução criativa de problemas',
-    'hero.viewWork': 'Ver Meu Trabalho',
+    'hero.title1': 'William Tavares de Moura',
+    'hero.title2': 'Desenvolvedor de Software',
+    'hero.subtitle': 'Desenvolvendo aplicações web de alto desempenho utilizando PHP, React, Next.js, SQL e princípios de arquitetura limpa.',
+    'hero.viewWork': 'Ver Projetos',
     'hero.contact': 'Entrar em Contato',
     
     // About
@@ -226,10 +226,10 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.contact': 'Contacto',
     
     // Hero
-    'hero.title1': 'Desarrollador Creativo',
-    'hero.title2': 'Construyendo Excelencia Digital',
-    'hero.subtitle': 'Transformando ideas en soluciones innovadoras y escalables con tecnología de vanguardia y resolución creativa de problemas',
-    'hero.viewWork': 'Ver Mi Trabajo',
+    'hero.title1': 'William Tavares de Moura',
+    'hero.title2': 'Desarrollador de Software',
+    'hero.subtitle': 'Desarrollando aplicaciones web de alto rendimiento utilizando PHP, React, Next.js, SQL y principios de arquitectura limpia.',
+    'hero.viewWork': 'Ver Proyectos',
     'hero.contact': 'Contactar',
     
     // About
