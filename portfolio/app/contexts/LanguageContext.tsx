@@ -237,14 +237,15 @@ const translations: Record<Language, Record<string, string>> = {
     // About
     'about.title': 'Sobre Mí',
     'about.professional': 'Profesional',
-    'about.professionalDesc': 'Escribiendo código limpio y mantenible con las mejores prácticas de la industria y atención al detalle',
+    'about.professionalDesc': 'Desarrollo de software con enfoque en código limpio, sostenible y alineado con las mejores prácticas de la industria, siempre con altos estándares de calidad y atención al detalle.',
     'about.innovation': 'Innovación',
-    'about.innovationDesc': 'Aprovechando tecnologías de vanguardia para construir aplicaciones preparadas para el futuro',
+    'about.innovationDesc': 'Aprovechando tecnologías de punta para construir aplicaciones preparadas para el futuro',
     'about.creative': 'Creativo',
-    'about.creativeDesc': 'Pensando fuera de la caja para resolver problemas complejos con soluciones elegantes',
-    'about.p1': 'Soy un desarrollador de software apasionado dedicado a crear experiencias digitales excepcionales. Con una base sólida en tecnologías web modernas y un ojo agudo para el diseño, conecto la funcionalidad con la estética.',
-    'about.p2': 'Mi enfoque combina experiencia técnica con resolución creativa de problemas, asegurando que cada proyecto no solo esté bien construido, sino construido correctamente. Estoy constantemente aprendiendo, adaptándome y empujando los límites de lo que es posible en el desarrollo de software.',
-    'about.p3': 'Ya sea arquitectando sistemas backend escalables o diseñando interfaces de usuario perfectas al píxel, aporto profesionalismo, innovación y creatividad a cada línea de código.',
+    'about.creativeDesc': 'Resolviendo problemas complejos mediante enfoques inteligentes y soluciones elegantes.',
+    'about.p1': 'Soy un desarrollador de software enfocado en crear soluciones digitales que resuelven problemas reales y generan valor para personas y negocios. A lo largo de mi trayectoria, he construido una base sólida en el desarrollo de sistemas web, trabajando en proyectos para el mercado financiero, el mercado de propiedad industrial, plataformas internas y sistemas de gestión, siempre con atención a la calidad, el rendimiento y la escalabilidad.',
+    'about.p2': 'Me gradué en Análisis y Desarrollo de Sistemas en el Centro Universitario UNISENAC RS en 2025, lo que me proporcionó una visión estructurada sobre arquitectura, buenas prácticas e ingeniería de software, mientras que la experiencia práctica consolidó mi capacidad para transformar requisitos complejos en soluciones claras, funcionales y bien arquitectadas.',
+    'about.p3': 'Me gusta entender el problema antes de escribir la primera línea de código. Creo que el software de calidad nace de la combinación de planificación, comunicación y ejecución técnica consistente. Por eso, busco desarrollar aplicaciones limpias, organizadas y fáciles de evolucionar.',
+    'about.p4': 'Estoy comprometido con la mejora continua, manteniéndome actualizado con las últimas tendencias de la industria y entregando soluciones que superen las expectativas.',
     
     // Skills
     'skills.title': 'Habilidades & Experiencia',
