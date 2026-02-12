@@ -4,6 +4,7 @@ import { Header } from '@/app/components/Header';
 import { Hero } from '@/app/components/Hero';
 import { About } from '@/app/components/About';
 import { Skills } from './components/Skills';
+import { Projects } from './components/Projets';
 export default function Home() {
   return (
    <ThemeProvider>
@@ -13,6 +14,7 @@ export default function Home() {
           <Hero />
           <About />
           <Skills />
+          <Projects />
         </div>
       </LanguageProvider>
     </ThemeProvider>

@@ -20,6 +20,8 @@ import {
   SiDjango,
   SiMysql,
   SiJquery,
+  SiHtml5,
+  SiCss3
 
 } from 'react-icons/si';
 import { LuWorkflow } from 'react-icons/lu';
@@ -37,6 +39,8 @@ export function Skills() {
         { name: 'Tailwind CSS', icon: SiTailwindcss },
         { name: 'Bootstrap', icon: SiBootstrap },
         { name: 'JQuery', icon: SiJquery },
+        { name: 'HTML5', icon: SiHtml5 },
+        { name: 'CSS3', icon: SiCss3 },
 
       ]
     },
