@@ -5,6 +5,7 @@ import { Hero } from '@/app/components/Hero';
 import { About } from '@/app/components/About';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projets';
+import { Footer } from './components/Footer';
 export default function Home() {
   return (
    <ThemeProvider>
@@ -15,6 +16,7 @@ export default function Home() {
           <About />
           <Skills />
           <Projects />
+          <Footer />
         </div>
       </LanguageProvider>
     </ThemeProvider>
