@@ -60,35 +60,28 @@ const translations: Record<Language, Record<string, string>> = {
     'projects.meuportifolio.desc': 'A showcase of my skills and projects developed throughout my career. Built with React and Next.js, focusing on responsive design and user experience.',
 
     // Experience
-    'experience.title': 'Experience & Education',
-    'experience.senior.title': 'Senior Full-Stack Developer',
-    'experience.senior.company': 'Tech Innovations Inc.',
-    'experience.senior.period': '2022 - Present',
-    'experience.senior.desc': 'Leading development of enterprise-level applications, mentoring junior developers, and architecting scalable solutions for Fortune 500 clients.',
-    'experience.senior.ach1': 'Improved application performance by 60%',
-    'experience.senior.ach2': 'Led team of 5 developers',
-    'experience.senior.ach3': 'Implemented CI/CD pipeline reducing deployment time by 80%',
-    'experience.fullstack.title': 'Full-Stack Developer',
-    'experience.fullstack.company': 'Digital Solutions Co.',
-    'experience.fullstack.period': '2020 - 2022',
-    'experience.fullstack.desc': 'Developed and maintained web applications using React, Node.js, and cloud technologies. Collaborated with cross-functional teams to deliver high-quality products.',
-    'experience.fullstack.ach1': 'Built 15+ client projects from scratch',
-    'experience.fullstack.ach2': 'Reduced bug rate by 40% through testing automation',
-    'experience.fullstack.ach3': 'Implemented responsive design system',
-    'experience.education.title': 'Bachelor of Computer Science',
-    'experience.education.company': 'University of Technology',
-    'experience.education.period': '2016 - 2020',
-    'experience.education.desc': 'Graduated with honors. Focused on software engineering, data structures, and algorithms. Active member of coding club and hackathon participant.',
-    'experience.education.ach1': 'GPA: 3.8/4.0',
-    'experience.education.ach2': 'Winner of university hackathon 2019',
-    'experience.education.ach3': 'Published research on machine learning optimization',
-    'experience.junior.title': 'Junior Developer',
-    'experience.junior.company': 'StartUp Studio',
-    'experience.junior.period': '2019 - 2020',
-    'experience.junior.desc': 'Started career as an intern and quickly promoted to junior developer. Contributed to multiple projects and learned modern development practices.',
-    'experience.junior.ach1': 'Developed 3 mobile-responsive websites',
-    'experience.junior.ach2': 'Contributed to open-source projects',
-    'experience.junior.ach3': 'Received "Rising Star" award',
+    'experience.title': 'My Professional Journey',
+    'experience.senior.title': 'Software Developer',
+    'experience.senior.company': 'Credware Tecnologia',
+    'experience.senior.period': '2025 - Present',
+    'experience.senior.desc': 'I work as a Backend developer in systems focused on the financial market, CRM, and internal platforms, using PHP 8 and 7, Laravel Framework, Codeigniter, Docker, and frontend tools. Currently, I work on system maintenance, evolutionary maintenance, development of new features, integrations with banking APIs, bug fixes, refactorings, and performance and stability improvements.',
+    'experience.senior.ach1': 'Implemented new features and bug fixes in critical business systems',
+    'experience.senior.ach2': 'Ensured high quality and performance in systems with large volumes of data and users',
+    'experience.senior.ach3': 'Utilized best development practices, clean architecture, and SOLID principles to ensure sustainable and easy-to-evolve code',
+    'experience.fullstack.title': 'Full-Stack Developer PHP',
+    'experience.fullstack.company': 'Verticais Labs',
+    'experience.fullstack.period': '2025 - 2025',
+    'experience.fullstack.desc': 'I worked as a developer on projects focused on a client in the industrial property registration area, contributing with specific solutions for process automation, financial control, and generation of fiscal and administrative documents.',
+    'experience.fullstack.ach1': 'Maintenance of Invoice Issuance Systems: Support and update modules focused on service invoice issuance, ensuring fiscal compliance and integration with internal systems.',
+    'experience.fullstack.ach2': 'Development of Payment Systems: Implementation of functionalities for financial control and generation of detailed financial movement reports, essential for efficient client management.',
+    'experience.fullstack.ach3': 'Database Support: Acted in the maintenance and optimization of PostgreSQL databases, ensuring performance and data integrity in systems critical to the client.',
+    'experience.junior.title': 'Backend Development Intern',
+    'experience.junior.company': 'Verticais Labs',
+    'experience.junior.period': '2024 - 2025',
+    'experience.junior.desc': 'I started my career as an intern and was quickly promoted to full-stack PHP developer. I contributed to system maintenance, focusing on efficient solutions to optimize processes and improve user experience.',
+    'experience.junior.ach1': 'Maintenance of legacy systems: Worked on robust projects using PHP 5.4, ensuring stability and continuous improvements in internal systems.',
+    'experience.junior.ach2': 'Implementation of routines and automations: Planned and developed automated processes, integrating different systems to achieve faster and more accurate results.',
+    'experience.junior.ach3': 'Development of ERPs in PHP 7: Created and implemented complete solutions for business management, tailored to client needs."',
     
     // Contact
     'contact.title': "Let's Work Together",
@@ -114,6 +107,8 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.rights': 'All rights reserved.',
     'footer.builtWith': 'Built with',
     'footer.using': 'using React & Tailwind CSS',
+
+    'title': 'William Tavares | Software Developer',
   },
   pt: {
     // Navigation
@@ -211,6 +206,8 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.rights': 'Todos os direitos reservados.',
     'footer.builtWith': 'Feito com',
     'footer.using': 'usando React & Tailwind CSS',
+
+    'title': 'William Tavares | Desenvolvedor de Software',
   },
   es: {
     // Navigation
@@ -315,6 +312,8 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.rights': 'Todos los derechos reservados.',
     'footer.builtWith': 'Hecho con',
     'footer.using': 'usando React & Tailwind CSS',
+
+    'title': 'William Tavares | Desarrollador de Software',
   }
 };
 

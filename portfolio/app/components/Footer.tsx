@@ -11,7 +11,7 @@ export function Footer() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-slate-400">
-            © {new Date().getFullYear()} | Desenvolvido por William Tavares de Moura. {t('footer.rights')}
+            © {new Date().getFullYear()} | William Tavares de Moura. {t('footer.rights')}
           </p>
           <p className="flex items-center gap-2 text-slate-400">
             {t('footer.builtWith')} <Heart size={16} className="text-red-500" /> {t('footer.using')}
