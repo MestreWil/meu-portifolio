@@ -5,6 +5,8 @@ import { ExternalLink, Github } from 'lucide-react';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 import musicrateimg from '@/app/assets/projets/musicrate.png';
 import warframeimg from '@/app/assets/projets/warframefake.png';
+import musicratev1img from '@/app/assets/projets/musicratev1.png';
+import telaportifolioimg from '@/app/assets/projets/telaportifolio.png';
 
 export function Projects() {
   const { t } = useLanguage();
@@ -27,18 +29,18 @@ export function Projects() {
       githubUrl: 'https://github.com/oThisgo/projeto_final_mobile'
     },
     {
-      title: t('projects.task.title'),
-      description: t('projects.task.desc'),
-      image: 'https://images.unsplash.com/photo-1660810731526-0720827cbd38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMGRldmVsb3BlciUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3Njg1MjM3MDh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      tags: ['React', 'Firebase', 'Material-UI', 'WebSocket'],
+      title: t('projects.musicratev1.title'),
+      description: t('projects.musicratev1.desc'),
+      image: musicratev1img.src,
+      tags: ['React', 'Django', 'Sqlite'],
       liveUrl: '#',
       githubUrl: '#'
     },
     {
-      title: t('projects.analytics.title'),
-      description: t('projects.analytics.desc'),
-      image: 'https://images.unsplash.com/photo-1739343338040-2dae68f6bdf5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB0ZWNobm9sb2d5JTIwYWJzdHJhY3R8ZW58MXx8fHwxNzY4NTc0OTIzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      tags: ['Vue.js', 'D3.js', 'Python', 'FastAPI'],
+      title: t('projects.meuportifolio.title'),
+      description: t('projects.meuportifolio.desc'),
+      image: telaportifolioimg.src,
+      tags: ['React', 'Next.js'],
       liveUrl: '#',
       githubUrl: '#'
     }

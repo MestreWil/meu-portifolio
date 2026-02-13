@@ -6,6 +6,7 @@ import { About } from '@/app/components/About';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projets';
 import { Experience } from './components/Experience';
+import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
           <Skills />
           <Projects />
           <Experience />
+          <Contact />
           <Footer />
         </div>
       </LanguageProvider>
