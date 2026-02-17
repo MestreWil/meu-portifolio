@@ -1,8 +1,8 @@
 "use client";
 
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, ReactNode } from "react";
 
-type Language = 'en' | 'pt' | 'es';
+type Language = "en" | "pt" | "es";
 
 interface LanguageContextType {
   language: Language;
@@ -13,314 +13,396 @@ interface LanguageContextType {
 const translations: Record<Language, Record<string, string>> = {
   en: {
     // Navigation
-    'nav.about': 'About',
-    'nav.skills': 'Skills',
-    'nav.projects': 'Projects',
-    'nav.experience': 'Experience',
-    'nav.contact': 'Contact',
-    
+    "nav.about": "About",
+    "nav.skills": "Skills",
+    "nav.projects": "Projects",
+    "nav.experience": "Experience",
+    "nav.contact": "Contact",
+
     // Hero
-    'hero.title1': 'William Tavares de Moura',
-    'hero.title2': 'Software Developer',
-    'hero.subtitle': 'Transforming complex problems into modern web applications using Laravel, CodeIgniter, React, Django, JavaScript, TypeScript and Docker.',
-    'hero.viewWork': 'View Projects',
-    'hero.contact': 'Contact Me',
-    
+    "hero.title1": "William Tavares de Moura",
+    "hero.title2": "Software Developer",
+    "hero.subtitle":
+      "Transforming complex problems into modern web applications using Laravel, CodeIgniter, React, Django, JavaScript, TypeScript and Docker.",
+    "hero.viewWork": "View Projects",
+    "hero.contact": "Contact Me",
+
     // About
-    'about.title': 'About Me',
-    'about.professional': 'Professional',
-    'about.professionalDesc': 'Software development with a focus on clean, sustainable code aligned with industry best practices, always with high standards of quality and attention to detail',
-    'about.innovation': 'Innovation',
-    'about.innovationDesc': 'Strategic application of modern technologies to build robust, scalable, and future-proof solutions',
-    'about.creative': 'Creative',
-    'about.creativeDesc': 'Thinking outside the box to solve complex problems with elegant solutions',
-    'about.p1': "I'm a software developer focused on creating digital solutions that solve real problems and deliver value to people and businesses. Throughout my journey, I've built a strong foundation in web systems development, working on projects for the financial market, industrial property market, internal platforms, and management systems, always with attention to quality, performance, and scalability.",
-    'about.p2': "Graduated in Systems Analysis and Development from Centro Universitário UNISENAC RS in 2025, which provided me with a structured view of architecture, best practices, and software engineering, while practical experience consolidated my ability to transform complex requirements into clear, functional, and well-architected solutions.",
-    'about.p3': "I like to understand the problem before writing the first line of code. I believe quality software is born from the combination of planning, communication, and consistent technical execution. Therefore, I strive to develop clean, organized, and easy-to-evolve applications.",
-    'about.p4': "I'm committed to continuous improvement, staying updated with the latest industry trends, and delivering solutions that exceed expectations.",
-    
+    "about.title": "About Me",
+    "about.professional": "Professional",
+    "about.professionalDesc":
+      "Software development with a focus on clean, sustainable code aligned with industry best practices, always with high standards of quality and attention to detail",
+    "about.innovation": "Innovation",
+    "about.innovationDesc":
+      "Strategic application of modern technologies to build robust, scalable, and future-proof solutions",
+    "about.creative": "Creative",
+    "about.creativeDesc":
+      "Thinking outside the box to solve complex problems with elegant solutions",
+    "about.p1":
+      "I'm a software developer focused on creating digital solutions that solve real problems and deliver value to people and businesses. Throughout my journey, I've built a strong foundation in web systems development, working on projects for the financial market, industrial property market, internal platforms, and management systems, always with attention to quality, performance, and scalability.",
+    "about.p2":
+      "Graduated in Systems Analysis and Development from Centro Universitário UNISENAC RS in 2025, which provided me with a structured view of architecture, best practices, and software engineering, while practical experience consolidated my ability to transform complex requirements into clear, functional, and well-architected solutions.",
+    "about.p3":
+      "I like to understand the problem before writing the first line of code. I believe quality software is born from the combination of planning, communication, and consistent technical execution. Therefore, I strive to develop clean, organized, and easy-to-evolve applications.",
+    "about.p4":
+      "I'm committed to continuous improvement, staying updated with the latest industry trends, and delivering solutions that exceed expectations.",
+
     // Skills
-    'skills.title': 'Skills & Expertise',
-    'skills.frontend': 'Frontend',
-    'skills.backend': 'Backend',
-    'skills.tools': 'Tools & Others',
-    
+    "skills.title": "Skills & Expertise",
+    "skills.frontend": "Frontend",
+    "skills.backend": "Backend",
+    "skills.tools": "Tools & Others",
+
     // Projects
-    'projects.title': 'Featured Projects',
-    'projects.subtitle': 'A showcase of my recent work demonstrating expertise in full-stack development, modern frameworks, and innovative solutions',
-    'projects.liveDemo': 'Live Demo',
-    'projects.code': 'Code',
-    'projects.musicrate.title': 'MusicRATE',
-    'projects.musicrate.desc': 'A music discovery and rating system that connects users to new artists, with a focus on independent musicians and smart recommendations. Developed with React, Next.js, Laravel, Docker, and PostgreSQL, utilizing the Spotify API.',
-    'projects.warframe.title': 'Warframe Fake Page',
-    'projects.warframe.desc': 'Web page inspired by the game Warframe, developed for academic purposes with a focus on consolidating knowledge in responsive web development and frontend best practices using pure HTML and CSS.',
-    'projects.musicratev1.title': 'MusicRATE version 1.0',
-    'projects.musicratev1.desc': 'First version of the MusicRATE application, focused on connecting users to new artists and music recommendations. Simple full-stack application with mocked data developed using React, Next.js, Django, and SQLite.',
-    'projects.meuportifolio.title': 'My Portfolio',
-    'projects.meuportifolio.desc': 'A showcase of my skills and projects developed throughout my career. Built with React and Next.js, focusing on responsive design and user experience.',
+    "projects.title": "Featured Projects",
+    "projects.subtitle":
+      "A showcase of my recent work demonstrating expertise in full-stack development, modern frameworks, and innovative solutions",
+    "projects.liveDemo": "Live Demo",
+    "projects.code": "Code",
+    "projects.musicrate.title": "MusicRATE",
+    "projects.musicrate.desc":
+      "A music discovery and rating system that connects users to new artists, with a focus on independent musicians and smart recommendations. Developed with React, Next.js, Laravel, Docker, and PostgreSQL, utilizing the Spotify API.",
+    "projects.warframe.title": "Warframe Fake Page",
+    "projects.warframe.desc":
+      "Web page inspired by the game Warframe, developed for academic purposes with a focus on consolidating knowledge in responsive web development and frontend best practices using pure HTML and CSS.",
+    "projects.musicratev1.title": "MusicRATE version 1.0",
+    "projects.musicratev1.desc":
+      "First version of the MusicRATE application, focused on connecting users to new artists and music recommendations. Simple full-stack application with mocked data developed using React, Next.js, Django, and SQLite.",
+    "projects.meuportifolio.title": "My Portfolio",
+    "projects.meuportifolio.desc":
+      "A showcase of my skills and projects developed throughout my career. Built with React and Next.js, focusing on responsive design and user experience.",
 
     // Experience
-    'experience.title': 'My Professional Journey',
-    'experience.senior.title': 'Software Developer',
-    'experience.senior.company': 'Credware Tecnologia',
-    'experience.senior.period': '2025 - Present',
-    'experience.senior.desc': 'I work as a Backend developer in systems focused on the financial market, CRM, and internal platforms, using PHP 8 and 7, Laravel Framework, Codeigniter, Docker, and frontend tools. Currently, I work on system maintenance, evolutionary maintenance, development of new features, integrations with banking APIs, bug fixes, refactorings, and performance and stability improvements.',
-    'experience.senior.ach1': 'Implemented new features and bug fixes in critical business systems',
-    'experience.senior.ach2': 'Ensured high quality and performance in systems with large volumes of data and users',
-    'experience.senior.ach3': 'Utilized best development practices, clean architecture, and SOLID principles to ensure sustainable and easy-to-evolve code',
-    'experience.fullstack.title': 'Full-Stack Developer PHP',
-    'experience.fullstack.company': 'Verticais Labs',
-    'experience.fullstack.period': '2025 - 2025',
-    'experience.fullstack.desc': 'I worked as a developer on projects focused on a client in the industrial property registration area, contributing with specific solutions for process automation, financial control, and generation of fiscal and administrative documents.',
-    'experience.fullstack.ach1': 'Maintenance of Invoice Issuance Systems: Support and update modules focused on service invoice issuance, ensuring fiscal compliance and integration with internal systems.',
-    'experience.fullstack.ach2': 'Development of Payment Systems: Implementation of functionalities for financial control and generation of detailed financial movement reports, essential for efficient client management.',
-    'experience.fullstack.ach3': 'Database Support: Acted in the maintenance and optimization of PostgreSQL databases, ensuring performance and data integrity in systems critical to the client.',
-    'experience.junior.title': 'Backend Development Intern',
-    'experience.junior.company': 'Verticais Labs',
-    'experience.junior.period': '2024 - 2025',
-    'experience.junior.desc': 'I started my career as an intern and was quickly promoted to full-stack PHP developer. I contributed to system maintenance, focusing on efficient solutions to optimize processes and improve user experience.',
-    'experience.junior.ach1': 'Maintenance of legacy systems: Worked on robust projects using PHP 5.4, ensuring stability and continuous improvements in internal systems.',
-    'experience.junior.ach2': 'Implementation of routines and automations: Planned and developed automated processes, integrating different systems to achieve faster and more accurate results.',
-    'experience.junior.ach3': 'Development of ERPs in PHP 7: Created and implemented complete solutions for business management, tailored to client needs."',
-    
-    // Contact
-    'contact.title': "Let's Work Together",
-    'contact.subtitle': "Have a project in mind or want to collaborate? I'd love to hear from you. Let's create something amazing together!",
-    'contact.name': 'Name',
-    'contact.namePlaceholder': 'Your name',
-    'contact.email': 'Email',
-    'contact.emailPlaceholder': 'your.email@example.com',
-    'contact.message': 'Message',
-    'contact.messagePlaceholder': 'Tell me about your project...',
-    'contact.send': 'Send Message',
-    'contact.getInTouch': 'Get In Touch',
-    'contact.email.label': 'Email',
-    'contact.phone.label': 'Phone',
-    'contact.location.label': 'Location',
-    'contact.location.value': 'Porto Alegre, Rio Grande do Sul, Brazil',
-    'contact.followMe': 'Follow Me',
-    'contact.opportunities': 'Open to Opportunities',
-    'contact.opportunitiesDesc': "I'm currently available for freelance projects and full-time positions. Let's discuss how we can work together to bring your ideas to life.",
-    'contact.success': 'Thank you for your message! I will get back to you soon.',
-    
-    // Footer
-    'footer.rights': 'All rights reserved.',
-    'footer.builtWith': 'Built with',
-    'footer.using': 'using React & Tailwind CSS',
+    "experience.title": "My Professional Journey",
+    "experience.senior.title": "Software Developer",
+    "experience.senior.company": "Credware Tecnologia",
+    "experience.senior.period": "2025 - Present",
+    "experience.senior.desc":
+      "I work as a Backend developer in systems focused on the financial market, CRM, and internal platforms, using PHP 8 and 7, Laravel Framework, Codeigniter, Docker, and frontend tools. Currently, I work on system maintenance, evolutionary maintenance, development of new features, integrations with banking APIs, bug fixes, refactorings, and performance and stability improvements.",
+    "experience.senior.ach1":
+      "Implemented new features and bug fixes in critical business systems",
+    "experience.senior.ach2":
+      "Ensured high quality and performance in systems with large volumes of data and users",
+    "experience.senior.ach3":
+      "Utilized best development practices, clean architecture, and SOLID principles to ensure sustainable and easy-to-evolve code",
+    "experience.fullstack.title": "Full-Stack Developer PHP",
+    "experience.fullstack.company": "Verticais Labs",
+    "experience.fullstack.period": "2025 - 2025",
+    "experience.fullstack.desc":
+      "I worked as a developer on projects focused on a client in the industrial property registration area, contributing with specific solutions for process automation, financial control, and generation of fiscal and administrative documents.",
+    "experience.fullstack.ach1":
+      "Maintenance of Invoice Issuance Systems: Support and update modules focused on service invoice issuance, ensuring fiscal compliance and integration with internal systems.",
+    "experience.fullstack.ach2":
+      "Development of Payment Systems: Implementation of functionalities for financial control and generation of detailed financial movement reports, essential for efficient client management.",
+    "experience.fullstack.ach3":
+      "Database Support: Acted in the maintenance and optimization of PostgreSQL databases, ensuring performance and data integrity in systems critical to the client.",
+    "experience.junior.title": "Backend Development Intern",
+    "experience.junior.company": "Verticais Labs",
+    "experience.junior.period": "2024 - 2025",
+    "experience.junior.desc":
+      "I started my career as an intern and was quickly promoted to full-stack PHP developer. I contributed to system maintenance, focusing on efficient solutions to optimize processes and improve user experience.",
+    "experience.junior.ach1":
+      "Maintenance of legacy systems: Worked on robust projects using PHP 5.4, ensuring stability and continuous improvements in internal systems.",
+    "experience.junior.ach2":
+      "Implementation of routines and automations: Planned and developed automated processes, integrating different systems to achieve faster and more accurate results.",
+    "experience.junior.ach3":
+      'Development of ERPs in PHP 7: Created and implemented complete solutions for business management, tailored to client needs."',
 
-    'title': 'William Tavares | Software Developer',
+    // Contact
+    "contact.title": "Let's Work Together",
+    "contact.subtitle":
+      "Have a project in mind or want to collaborate? I'd love to hear from you. Let's create something amazing together!",
+    "contact.name": "Name",
+    "contact.namePlaceholder": "Your name",
+    "contact.email": "Email",
+    "contact.emailPlaceholder": "your.email@example.com",
+    "contact.message": "Message",
+    "contact.messagePlaceholder": "Tell me about your project...",
+    "contact.send": "Send Message",
+    "contact.getInTouch": "Get In Touch",
+    "contact.email.label": "Email",
+    "contact.phone.label": "Phone",
+    "contact.location.label": "Location",
+    "contact.location.value": "Porto Alegre, Rio Grande do Sul, Brazil",
+    "contact.followMe": "Follow Me",
+    "contact.opportunities": "Open to Opportunities",
+    "contact.opportunitiesDesc":
+      "I'm currently available for freelance projects and full-time positions. Let's discuss how we can work together to bring your ideas to life.",
+    "contact.success":
+      "Thank you for your message! I will get back to you soon.",
+
+    // Footer
+    "footer.rights": "All rights reserved.",
+    "footer.builtWith": "Built with",
+    "footer.using": "using React & Tailwind CSS",
+
+    title: "William Tavares | Software Developer",
   },
   pt: {
     // Navigation
-    'nav.about': 'Sobre',
-    'nav.skills': 'Habilidades',
-    'nav.projects': 'Projetos',
-    'nav.experience': 'Experiência',
-    'nav.contact': 'Contato',
-    
+    "nav.about": "Sobre",
+    "nav.skills": "Habilidades",
+    "nav.projects": "Projetos",
+    "nav.experience": "Experiência",
+    "nav.contact": "Contato",
+
     // Hero
-    'hero.title1': 'William Tavares de Moura',
-    'hero.title2': 'Desenvolvedor de Software',
-    'hero.subtitle': 'Transformo problemas complexos em aplicações web modernas, utilizando Laravel, CodeIgniter, React, Django, JavaScript, TypeScript e Docker.',
-    'hero.viewWork': 'Ver Projetos',
-    'hero.contact': 'Entrar em Contato',
-    
+    "hero.title1": "William Tavares de Moura",
+    "hero.title2": "Desenvolvedor de Software",
+    "hero.subtitle":
+      "Transformo problemas complexos em aplicações web modernas, utilizando Laravel, CodeIgniter, React, Django, JavaScript, TypeScript e Docker.",
+    "hero.viewWork": "Ver Projetos",
+    "hero.contact": "Entrar em Contato",
+
     // About
-    'about.title': 'Sobre Mim',
-    'about.professional': 'Profissional',
-    'about.professionalDesc': 'Desenvolvimento de software com foco em código limpo, sustentável e alinhado às melhores práticas da indústria, sempre com alto padrão de qualidade e atenção aos detalhes.',
-    'about.innovation': 'Inovação',
-    'about.innovationDesc': 'Aplicação estratégica de tecnologias modernas para criar soluções robustas, escaláveis e preparadas para o futuro.',
-    'about.creative': 'Criativo',
-    'about.creativeDesc': 'Resolução de problemas complexos por meio de abordagens inteligentes e soluções elegantes.',
-    'about.p1': 'Sou desenvolvedor de software focado em criar soluções digitais que resolvem problemas reais e geram valor para pessoas e negócios. Ao longo da minha trajetória, construí uma base sólida em desenvolvimento de sistemas web, atuando em projetos para o mercado financeiro, para o mercado de propriedade industrial, plataformas internas e sistemas de gestão, sempre com atenção à qualidade, desempenho e escalabilidade.',
-    'about.p2': 'Me formei em Análise e Desenvolvimento de Sistemas no Centro Universitário UNISENAC RS em 2025, o que me proporcionou uma visão estruturada sobre arquitetura, boas práticas e engenharia de software, enquanto a experiência prática consolidou minha capacidade de transformar requisitos complexos em soluções claras, funcionais e bem arquitetadas.',
-    'about.p3': 'Gosto de entender o problema antes de escrever a primeira linha de código. Acredito que software de qualidade nasce da combinação entre planejamento, comunicação e execução técnica consistente. Por isso, busco desenvolver aplicações limpas, organizadas e fáceis de evoluir.',
-    'about.p4': 'Seja no backend, construindo APIs e regras de negócio robustas, ou no frontend, criando interfaces modernas e intuitivas, atuo com profissionalismo, senso de responsabilidade e compromisso com entregas que realmente fazem a diferença para o cliente.',
-    
+    "about.title": "Sobre Mim",
+    "about.professional": "Profissional",
+    "about.professionalDesc":
+      "Desenvolvimento de software com foco em código limpo, sustentável e alinhado às melhores práticas da indústria, sempre com alto padrão de qualidade e atenção aos detalhes.",
+    "about.innovation": "Inovação",
+    "about.innovationDesc":
+      "Aplicação estratégica de tecnologias modernas para criar soluções robustas, escaláveis e preparadas para o futuro.",
+    "about.creative": "Criativo",
+    "about.creativeDesc":
+      "Resolução de problemas complexos por meio de abordagens inteligentes e soluções elegantes.",
+    "about.p1":
+      "Sou desenvolvedor de software focado em criar soluções digitais que resolvem problemas reais e geram valor para pessoas e negócios. Ao longo da minha trajetória, construí uma base sólida em desenvolvimento de sistemas web, atuando em projetos para o mercado financeiro, para o mercado de propriedade industrial, plataformas internas e sistemas de gestão, sempre com atenção à qualidade, desempenho e escalabilidade.",
+    "about.p2":
+      "Me formei em Análise e Desenvolvimento de Sistemas no Centro Universitário UNISENAC RS em 2025, o que me proporcionou uma visão estruturada sobre arquitetura, boas práticas e engenharia de software, enquanto a experiência prática consolidou minha capacidade de transformar requisitos complexos em soluções claras, funcionais e bem arquitetadas.",
+    "about.p3":
+      "Gosto de entender o problema antes de escrever a primeira linha de código. Acredito que software de qualidade nasce da combinação entre planejamento, comunicação e execução técnica consistente. Por isso, busco desenvolver aplicações limpas, organizadas e fáceis de evoluir.",
+    "about.p4":
+      "Seja no backend, construindo APIs e regras de negócio robustas, ou no frontend, criando interfaces modernas e intuitivas, atuo com profissionalismo, senso de responsabilidade e compromisso com entregas que realmente fazem a diferença para o cliente.",
+
     // Skills
-    'skills.title': 'Habilidades & Expertise',
-    'skills.frontend': 'Frontend',
-    'skills.backend': 'Backend',
-    'skills.tools': 'Ferramentas & Outros',
-    
+    "skills.title": "Habilidades & Expertise",
+    "skills.frontend": "Frontend",
+    "skills.backend": "Backend",
+    "skills.tools": "Ferramentas & Outros",
+
     // Projects
-    'projects.title': 'Projetos em Destaque',
-    'projects.subtitle': 'Conheça alguns dos meus projetos mais recentes e descubra como transformo ideias em soluções web modernas, escaláveis e eficientes.',
-    'projects.liveDemo': 'Demo ao Vivo',
-    'projects.code': 'Código',
-    'projects.musicrate.title': 'MusicRATE',
-    'projects.musicrate.desc': 'Sistema de descoberta e avaliação musical que conecta usuários a novos artistas, com foco em músicos independentes e recomendações inteligentes. Desenvolvido com React, Next.js, Laravel, Docker e PostgreSQL, utilizando a API do Spotify.',
-    'projects.warframe.title': 'Warframe Fake Page',
-    'projects.warframe.desc': 'Página conceitual inspirada no jogo Warframe, desenvolvida para fins acadêmicos com foco em consolidar conhecimentos em desenvolvimento web responsivo e boas práticas de frontend utilizando HTML e CSS puro.',
-    'projects.musicratev1.title': 'MusicRATE versão 1.0',
-    'projects.musicratev1.desc': 'Primeira versão da aplicação MusicRATE, focada em conectar usuários a novos artistas e recomendações musicais. Aplicação full-stack simples com dados mockados desenvolvida utilizando React, Next.js, Django e sqlite.',
-    'projects.meuportifolio.title': 'Meu portifólio',
-    'projects.meuportifolio.desc': 'Uma vitrine das minhas habilidades e projetos desenvolvidos ao longo da minha carreira. Construído em React e Next.js, com foco em design responsivo e experiência do usuário.',
+    "projects.title": "Projetos em Destaque",
+    "projects.subtitle":
+      "Conheça alguns dos meus projetos mais recentes e descubra como transformo ideias em soluções web modernas, escaláveis e eficientes.",
+    "projects.liveDemo": "Demo ao Vivo",
+    "projects.code": "Código",
+    "projects.musicrate.title": "MusicRATE",
+    "projects.musicrate.desc":
+      "Sistema de descoberta e avaliação musical que conecta usuários a novos artistas, com foco em músicos independentes e recomendações inteligentes. Desenvolvido com React, Next.js, Laravel, Docker e PostgreSQL, utilizando a API do Spotify.",
+    "projects.warframe.title": "Warframe Fake Page",
+    "projects.warframe.desc":
+      "Página conceitual inspirada no jogo Warframe, desenvolvida para fins acadêmicos com foco em consolidar conhecimentos em desenvolvimento web responsivo e boas práticas de frontend utilizando HTML e CSS puro.",
+    "projects.musicratev1.title": "MusicRATE versão 1.0",
+    "projects.musicratev1.desc":
+      "Primeira versão da aplicação MusicRATE, focada em conectar usuários a novos artistas e recomendações musicais. Aplicação full-stack simples com dados mockados desenvolvida utilizando React, Next.js, Django e sqlite.",
+    "projects.meuportifolio.title": "Meu portifólio",
+    "projects.meuportifolio.desc":
+      "Uma vitrine das minhas habilidades e projetos desenvolvidos ao longo da minha carreira. Construído em React e Next.js, com foco em design responsivo e experiência do usuário.",
 
     // Experience
-    'experience.title': 'Minha jornada profissinal',
-    'experience.senior.title': 'Desenvolvedor de Sistemas',
-    'experience.senior.company': 'Credware Tecnologia',
-    'experience.senior.period': '2025 - Presente',
-    'experience.senior.desc': 'Atuo como desenvolvedor Backend em sistemas voltados ao mercado financeiro, CRM e plataformas internas, utilizando PHP 8 e 7, Framework Laravel, Codeigneiter, Docker e ferramentas de frontend. Atualmente trabalho na sustentação de sistemas, manutenção evolutiva, desenvolvimento de novas funcionalidades, integrações com APIs bancárias, corrreção de bugs, refatorações e mlhorias de performance e estabilidade',
-    'experience.senior.ach1': 'Implementação de novas features e correção de bugs em sistemas críticos para o negócio',
-    'experience.senior.ach2': 'Garantia de alta qualidade e performance em sistemas com grande volume de dados e usuários',
-    'experience.senior.ach3': 'Utilização de boas práticas de desenvolvimento, arquitetura limpa e princípios SOLID para garantir código sustentável e fácil de evoluir',
-    'experience.fullstack.title': 'Desenvolvedor Full-Stack PHP',
-    'experience.fullstack.company': 'Verticais Labs',
-    'experience.fullstack.period': '2025 - 2025',
-    'experience.fullstack.desc': 'Atuei como desenvolvedor em projetos voltados a um cliente da área de registro de propriedade industrial, contribuindo com soluções específicas para automatização de processos, controle financeiro e geração de documentos fiscais e administrativos.',
-    'experience.fullstack.ach1': 'Manutenção de sistemas de emissão de Notas Fiscais: Suporte e atualização de módulos voltados à emissão de notas fiscais de serviços, garantindo conformidade fiscal e integração com sistemas internos.',
-    'experience.fullstack.ach2': 'Desenvolvimento de sistemas de Pagadoria: Implementação de funcionalidades para controle financeiro e geração de relatórios detalhados de movimentação financeira, essensiais para a gestão eficiente do cliente.',
-    'experience.fullstack.ach3': 'Suporte a Banco de Dados: Atuação na manutenção e otimização de bancos de dados PostgreSQL, garantindo performance e integridade dos dados em sistemas críticos para o cliente.',
-    'experience.junior.title': 'Estagiário de Desenvolvimento Backend',
-    'experience.junior.company': 'Verticais Labs',
-    'experience.junior.period': '2024 - 2025',
-    'experience.junior.desc': 'Iniciei a carreira como estagiário e fui rapidamente promovido a desenvolvedor Full-Stack PHP. Contribuí na manutenção de sistemas, com foco em soluções eficientes para otimizar processos e melhorar a experiência do usuário.',
-    'experience.junior.ach1': 'Manutenção de sistemas legados: Atuação em projetos robustos utilizando PHP 5.4, garantindo estabilidade e melhorias contínuas em sistemas internos.',
-    'experience.junior.ach2': 'Implementação de rotinas e automações: Planejamento e desenvolvimento de processos automatizados, integrando diferentes sistemas para alcançar resultados mais rápidos e precisos.',
-    'experience.junior.ach3': 'Desenvolvimento de ERPs em PHP 7: Criação e implementação de soluções completas para gestão empresarial, adaptadas às necessidades do cliente."',
-    
-    // Contact
-    'contact.title': 'Vamos Trabalhar Juntos',
-    'contact.subtitle': 'Tem um projeto em mente ou quer colaborar? Eu adoraria ouvir de você. Vamos criar algo incrível juntos!',
-    'contact.name': 'Nome',
-    'contact.namePlaceholder': 'Seu nome',
-    'contact.email': 'E-mail',
-    'contact.emailPlaceholder': 'seu.email@exemplo.com',
-    'contact.message': 'Mensagem',
-    'contact.messagePlaceholder': 'Conte-me sobre seu projeto...',
-    'contact.send': 'Enviar Mensagem',
-    'contact.getInTouch': 'Entre em Contato',
-    'contact.email.label': 'E-mail',
-    'contact.phone.label': 'Telefone',
-    'contact.location.label': 'Localização',
-    'contact.location.value': 'Porto Alegre, Rio Grande do Sul, Brasil',
-    'contact.followMe': 'Siga-me',
-    'contact.opportunities': 'Aberto a Oportunidades',
-    'contact.opportunitiesDesc': 'Estou atualmente disponível para projetos freelance e posições tempo integral. Vamos discutir como podemos trabalhar juntos para dar vida às suas ideias.',
-    'contact.success': 'Obrigado pela sua mensagem! Entrarei em contato em breve.',
-    
-    // Footer
-    'footer.rights': 'Todos os direitos reservados.',
-    'footer.builtWith': 'Feito com',
-    'footer.using': 'usando React & Tailwind CSS',
+    "experience.title": "Minha Jornada Profissional",
+    "experience.senior.title": "Desenvolvedor de Sistemas",
+    "experience.senior.company": "Credware Tecnologia",
+    "experience.senior.period": "2025 - Presente",
+    "experience.senior.desc":
+      "Atuo como desenvolvedor Backend em sistemas voltados ao mercado financeiro, CRM e plataformas internas, utilizando PHP 8 e 7, Framework Laravel, CodeIgniter, Docker e ferramentas de frontend. Atualmente trabalho na sustentação de sistemas, manutenção evolutiva, desenvolvimento de novas funcionalidades, integrações com APIs bancárias, correção de bugs, refatorações e melhorias de performance e estabilidade.",
+    "experience.senior.ach1":
+      "Implementação de novas features e correção de bugs em sistemas críticos para o negócio",
+    "experience.senior.ach2":
+      "Garantia de alta qualidade e performance em sistemas com grande volume de dados e usuários",
+    "experience.senior.ach3":
+      "Utilização de boas práticas de desenvolvimento, arquitetura limpa e princípios SOLID para garantir código sustentável e fácil de evoluir",
+    "experience.fullstack.title": "Desenvolvedor Full-Stack PHP",
+    "experience.fullstack.company": "Verticais Labs",
+    "experience.fullstack.period": "2025 - 2025",
+    "experience.fullstack.desc":
+      "Atuei como desenvolvedor em projetos voltados a um cliente da área de registro de propriedade industrial, contribuindo com soluções específicas para automatização de processos, controle financeiro e geração de documentos fiscais e administrativos.",
+    "experience.fullstack.ach1":
+      "Manutenção de sistemas de emissão de Notas Fiscais: Suporte e atualização de módulos voltados à emissão de notas fiscais de serviços, garantindo conformidade fiscal e integração com sistemas internos.",
+    "experience.fullstack.ach2":
+      "Desenvolvimento de sistemas de Pagadoria: Implementação de funcionalidades para controle financeiro e geração de relatórios detalhados de movimentação financeira, essenciais para a gestão eficiente do cliente.",
+    "experience.fullstack.ach3":
+      "Suporte a Banco de Dados: Atuação na manutenção e otimização de bancos de dados PostgreSQL, garantindo performance e integridade dos dados em sistemas críticos para o cliente.",
+    "experience.junior.title": "Estagiário de Desenvolvimento Backend",
+    "experience.junior.company": "Verticais Labs",
+    "experience.junior.period": "2024 - 2025",
+    "experience.junior.desc":
+      "Iniciei a carreira como estagiário e fui rapidamente promovido a desenvolvedor Full-Stack PHP. Contribuí na manutenção de sistemas, com foco em soluções eficientes para otimizar processos e melhorar a experiência do usuário.",
+    "experience.junior.ach1":
+      "Manutenção de sistemas legados: Atuação em projetos robustos utilizando PHP 5.4, garantindo estabilidade e melhorias contínuas em sistemas internos.",
+    "experience.junior.ach2":
+      "Implementação de rotinas e automações: Planejamento e desenvolvimento de processos automatizados, integrando diferentes sistemas para alcançar resultados mais rápidos e precisos.",
+    "experience.junior.ach3":
+      "Desenvolvimento de ERPs em PHP 7: Criação e implementação de soluções completas para gestão empresarial, adaptadas às necessidades do cliente.",
 
-    'title': 'William Tavares | Desenvolvedor de Software',
+    // Contact
+    "contact.title": "Vamos Trabalhar Juntos",
+    "contact.subtitle":
+      "Tem um projeto em mente ou quer colaborar? Eu adoraria ouvir de você. Vamos criar algo incrível juntos!",
+    "contact.name": "Nome",
+    "contact.namePlaceholder": "Seu nome",
+    "contact.email": "E-mail",
+    "contact.emailPlaceholder": "seu.email@exemplo.com",
+    "contact.message": "Mensagem",
+    "contact.messagePlaceholder": "Conte-me sobre seu projeto...",
+    "contact.send": "Enviar Mensagem",
+    "contact.getInTouch": "Entre em Contato",
+    "contact.email.label": "E-mail",
+    "contact.phone.label": "Telefone",
+    "contact.location.label": "Localização",
+    "contact.location.value": "Porto Alegre, Rio Grande do Sul, Brasil",
+    "contact.followMe": "Siga-me",
+    "contact.opportunities": "Aberto a Oportunidades",
+    "contact.opportunitiesDesc":
+      "Estou atualmente disponível para projetos freelance e posições tempo integral. Vamos discutir como podemos trabalhar juntos para dar vida às suas ideias.",
+    "contact.success":
+      "Obrigado pela sua mensagem! Entrarei em contato em breve.",
+
+    // Footer
+    "footer.rights": "Todos os direitos reservados.",
+    "footer.builtWith": "Feito com",
+    "footer.using": "usando React & Tailwind CSS",
+
+    title: "William Tavares | Desenvolvedor de Software",
   },
   es: {
     // Navigation
-    'nav.about': 'Acerca',
-    'nav.skills': 'Habilidades',
-    'nav.projects': 'Proyectos',
-    'nav.experience': 'Experiencia',
-    'nav.contact': 'Contacto',
-    
+    "nav.about": "Acerca",
+    "nav.skills": "Habilidades",
+    "nav.projects": "Proyectos",
+    "nav.experience": "Experiencia",
+    "nav.contact": "Contacto",
+
     // Hero
-    'hero.title1': 'William Tavares de Moura',
-    'hero.title2': 'Desarrollador de Software',
-    'hero.subtitle': 'Desarrollando aplicaciones web de alto rendimiento utilizando PHP, React, Next.js, SQL y principios de arquitectura limpia.',
-    'hero.viewWork': 'Ver Proyectos',
-    'hero.contact': 'Contactar',
-    
+    "hero.title1": "William Tavares de Moura",
+    "hero.title2": "Desarrollador de Software",
+    "hero.subtitle":
+      "Desarrollando aplicaciones web de alto rendimiento utilizando PHP, React, Next.js, SQL y principios de arquitectura limpia.",
+    "hero.viewWork": "Ver Proyectos",
+    "hero.contact": "Contactar",
+
     // About
-    'about.title': 'Sobre Mí',
-    'about.professional': 'Profesional',
-    'about.professionalDesc': 'Desarrollo de software con enfoque en código limpio, sostenible y alineado con las mejores prácticas de la industria, siempre con altos estándares de calidad y atención al detalle.',
-    'about.innovation': 'Innovación',
-    'about.innovationDesc': 'Aprovechando tecnologías de punta para construir aplicaciones preparadas para el futuro',
-    'about.creative': 'Creativo',
-    'about.creativeDesc': 'Resolviendo problemas complejos mediante enfoques inteligentes y soluciones elegantes.',
-    'about.p1': 'Soy un desarrollador de software enfocado en crear soluciones digitales que resuelven problemas reales y generan valor para personas y negocios. A lo largo de mi trayectoria, he construido una base sólida en el desarrollo de sistemas web, trabajando en proyectos para el mercado financiero, el mercado de propiedad industrial, plataformas internas y sistemas de gestión, siempre con atención a la calidad, el rendimiento y la escalabilidad.',
-    'about.p2': 'Me gradué en Análisis y Desarrollo de Sistemas en el Centro Universitario UNISENAC RS en 2025, lo que me proporcionó una visión estructurada sobre arquitectura, buenas prácticas e ingeniería de software, mientras que la experiencia práctica consolidó mi capacidad para transformar requisitos complejos en soluciones claras, funcionales y bien arquitectadas.',
-    'about.p3': 'Me gusta entender el problema antes de escribir la primera línea de código. Creo que el software de calidad nace de la combinación de planificación, comunicación y ejecución técnica consistente. Por eso, busco desarrollar aplicaciones limpias, organizadas y fáciles de evolucionar.',
-    'about.p4': 'Estoy comprometido con la mejora continua, manteniéndome actualizado con las últimas tendencias de la industria y entregando soluciones que superen las expectativas.',
-    
+    "about.title": "Sobre Mí",
+    "about.professional": "Profesional",
+    "about.professionalDesc":
+      "Desarrollo de software con enfoque en código limpio, sostenible y alineado con las mejores prácticas de la industria, siempre con altos estándares de calidad y atención al detalle.",
+    "about.innovation": "Innovación",
+    "about.innovationDesc":
+      "Aprovechando tecnologías de punta para construir aplicaciones preparadas para el futuro",
+    "about.creative": "Creativo",
+    "about.creativeDesc":
+      "Resolviendo problemas complejos mediante enfoques inteligentes y soluciones elegantes.",
+    "about.p1":
+      "Soy un desarrollador de software enfocado en crear soluciones digitales que resuelven problemas reales y generan valor para personas y negocios. A lo largo de mi trayectoria, he construido una base sólida en el desarrollo de sistemas web, trabajando en proyectos para el mercado financiero, el mercado de propiedad industrial, plataformas internas y sistemas de gestión, siempre con atención a la calidad, el rendimiento y la escalabilidad.",
+    "about.p2":
+      "Me gradué en Análisis y Desarrollo de Sistemas en el Centro Universitario UNISENAC RS en 2025, lo que me proporcionó una visión estructurada sobre arquitectura, buenas prácticas e ingeniería de software, mientras que la experiencia práctica consolidó mi capacidad para transformar requisitos complejos en soluciones claras, funcionales y bien arquitectadas.",
+    "about.p3":
+      "Me gusta entender el problema antes de escribir la primera línea de código. Creo que el software de calidad nace de la combinación de planificación, comunicación y ejecución técnica consistente. Por eso, busco desarrollar aplicaciones limpias, organizadas y fáciles de evolucionar.",
+    "about.p4":
+      "Estoy comprometido con la mejora continua, manteniéndome actualizado con las últimas tendencias de la industria y entregando soluciones que superen las expectativas.",
+
     // Skills
-    'skills.title': 'Habilidades & Experiencia',
-    'skills.frontend': 'Frontend',
-    'skills.backend': 'Backend',
-    'skills.tools': 'Herramientas & Otros',
-    
+    "skills.title": "Habilidades & Experiencia",
+    "skills.frontend": "Frontend",
+    "skills.backend": "Backend",
+    "skills.tools": "Herramientas & Otros",
+
     // Projects
-    'projects.title': 'Proyectos Destacados',
-    'projects.subtitle': 'Una muestra de mi trabajo reciente demostrando experiencia en desarrollo full-stack, frameworks modernos y soluciones innovadoras',
-    'projects.liveDemo': 'Demo en Vivo',
-    'projects.code': 'Código',
-    'projects.musicrate.title': 'Plataforma E-Commerce',
-    'projects.musicrate.desc': 'Una solución e-commerce full-stack con inventario en tiempo real, procesamiento de pagos y panel de administración. Construido con React, Node.js y PostgreSQL.',
-    'projects.warframe.title': 'Warframe Fake Page',
-    'projects.warframe.desc': 'Una página de fans no oficial para el juego Warframe, presentando noticias, guías y contenido generado por usuarios.',
-    'projects.musicratev1.title': 'MusicRATE versión 1.0',
-    'projects.musicratev1.desc': 'Primera versión de la aplicación MusicRATE, enfocada en conectar usuarios a nuevos artistas y recomendaciones musicales. Aplicación full-stack simple con datos mockados desarrollada utilizando React, Next.js, Django y SQLite.',
-    'projects.meuportifolio.title': 'Mi Portafolio',
-    'projects.meuportifolio.desc': 'Una vitrina de mis habilidades y proyectos desarrollados a lo largo de mi carrera. Construido en React y Next.js, con foco en diseño responsivo y experiencia del usuario.',
+    "projects.title": "Proyectos Destacados",
+    "projects.subtitle":
+      "Una muestra de mi trabajo reciente demostrando experiencia en desarrollo full-stack, frameworks modernos y soluciones innovadoras",
+    "projects.liveDemo": "Demo en Vivo",
+    "projects.code": "Código",
+    "projects.musicrate.title": "Plataforma E-Commerce",
+    "projects.musicrate.desc":
+      "Una solución e-commerce full-stack con inventario en tiempo real, procesamiento de pagos y panel de administración. Construido con React, Node.js y PostgreSQL.",
+    "projects.warframe.title": "Warframe Fake Page",
+    "projects.warframe.desc":
+      "Una página de fans no oficial para el juego Warframe, presentando noticias, guías y contenido generado por usuarios.",
+    "projects.musicratev1.title": "MusicRATE versión 1.0",
+    "projects.musicratev1.desc":
+      "Primera versión de la aplicación MusicRATE, enfocada en conectar usuarios a nuevos artistas y recomendaciones musicales. Aplicación full-stack simple con datos mockados desarrollada utilizando React, Next.js, Django y SQLite.",
+    "projects.meuportifolio.title": "Mi Portafolio",
+    "projects.meuportifolio.desc":
+      "Una vitrina de mis habilidades y proyectos desarrollados a lo largo de mi carrera. Construido en React y Next.js, con foco en diseño responsivo y experiencia del usuario.",
 
     // Experience
-    'experience.title': 'Experiencia & Educación',
-    'experience.senior.title': 'Desarrollador Full-Stack Senior',
-    'experience.senior.company': 'Tech Innovations Inc.',
-    'experience.senior.period': '2022 - Presente',
-    'experience.senior.desc': 'Liderando desarrollo de aplicaciones a nivel empresarial, mentorizando desarrolladores junior y arquitectando soluciones escalables para clientes Fortune 500.',
-    'experience.senior.ach1': 'Mejoró el rendimiento de la aplicación en un 60%',
-    'experience.senior.ach2': 'Lideró equipo de 5 desarrolladores',
-    'experience.senior.ach3': 'Implementó pipeline CI/CD reduciendo tiempo de despliegue en un 80%',
-    'experience.fullstack.title': 'Desarrollador Full-Stack',
-    'experience.fullstack.company': 'Digital Solutions Co.',
-    'experience.fullstack.period': '2020 - 2022',
-    'experience.fullstack.desc': 'Desarrolló y mantuvo aplicaciones web usando React, Node.js y tecnologías en la nube. Colaboró con equipos multifuncionales para entregar productos de alta calidad.',
-    'experience.fullstack.ach1': 'Construyó más de 15 proyectos desde cero',
-    'experience.fullstack.ach2': 'Redujo tasa de errores en un 40% mediante automatización de pruebas',
-    'experience.fullstack.ach3': 'Implementó sistema de diseño responsivo',
-    'experience.education.title': 'Licenciatura en Ciencias de la Computación',
-    'experience.education.company': 'Universidad de Tecnología',
-    'experience.education.period': '2016 - 2020',
-    'experience.education.desc': 'Graduado con honores. Enfocado en ingeniería de software, estructuras de datos y algoritmos. Miembro activo del club de programación y participante de hackathons.',
-    'experience.education.ach1': 'Promedio: 3.8/4.0',
-    'experience.education.ach2': 'Ganador del hackathon universitario 2019',
-    'experience.education.ach3': 'Publicó investigación sobre optimización de machine learning',
-    'experience.junior.title': 'Desarrollador Junior',
-    'experience.junior.company': 'StartUp Studio',
-    'experience.junior.period': '2019 - 2020',
-    'experience.junior.desc': 'Comenzó la carrera como pasante y rápidamente promovido a desarrollador junior. Contribuyó a múltiples proyectos y aprendió prácticas modernas de desarrollo.',
-    'experience.junior.ach1': 'Desarrolló 3 sitios web responsivos para móviles',
-    'experience.junior.ach2': 'Contribuyó a proyectos de código abierto',
-    'experience.junior.ach3': 'Recibió premio "Estrella en Ascenso"',
-    
-    // Contact
-    'contact.title': 'Trabajemos Juntos',
-    'contact.subtitle': '¿Tienes un proyecto en mente o quieres colaborar? Me encantaría saber de ti. ¡Creemos algo increíble juntos!',
-    'contact.name': 'Nombre',
-    'contact.namePlaceholder': 'Tu nombre',
-    'contact.email': 'Email',
-    'contact.emailPlaceholder': 'tu.email@ejemplo.com',
-    'contact.message': 'Mensaje',
-    'contact.messagePlaceholder': 'Cuéntame sobre tu proyecto...',
-    'contact.send': 'Enviar Mensaje',
-    'contact.getInTouch': 'Contactar',
-    'contact.email.label': 'Email',
-    'contact.phone.label': 'Teléfono',
-    'contact.location.label': 'Ubicación',
-    'contact.location.value': 'Porto Alegre, Rio Grande do Sul, Brasil',
-    'contact.followMe': 'Sígueme',
-    'contact.opportunities': 'Abierto a Oportunidades',
-    'contact.opportunitiesDesc': 'Actualmente estoy disponible para proyectos freelance y posiciones a tiempo completo. Hablemos sobre cómo podemos trabajar juntos para dar vida a tus ideas.',
-    'contact.success': '¡Gracias por tu mensaje! Me pondré en contacto pronto.',
-    
-    // Footer
-    'footer.rights': 'Todos los derechos reservados.',
-    'footer.builtWith': 'Hecho con',
-    'footer.using': 'usando React & Tailwind CSS',
+    "experience.title": "Experiencia & Educación",
+    "experience.senior.title": "Desarrollador Full-Stack Senior",
+    "experience.senior.company": "Tech Innovations Inc.",
+    "experience.senior.period": "2022 - Presente",
+    "experience.senior.desc":
+      "Liderando desarrollo de aplicaciones a nivel empresarial, mentorizando desarrolladores junior y arquitectando soluciones escalables para clientes Fortune 500.",
+    "experience.senior.ach1":
+      "Mejoró el rendimiento de la aplicación en un 60%",
+    "experience.senior.ach2": "Lideró equipo de 5 desarrolladores",
+    "experience.senior.ach3":
+      "Implementó pipeline CI/CD reduciendo tiempo de despliegue en un 80%",
+    "experience.fullstack.title": "Desarrollador Full-Stack",
+    "experience.fullstack.company": "Digital Solutions Co.",
+    "experience.fullstack.period": "2020 - 2022",
+    "experience.fullstack.desc":
+      "Desarrolló y mantuvo aplicaciones web usando React, Node.js y tecnologías en la nube. Colaboró con equipos multifuncionales para entregar productos de alta calidad.",
+    "experience.fullstack.ach1": "Construyó más de 15 proyectos desde cero",
+    "experience.fullstack.ach2":
+      "Redujo tasa de errores en un 40% mediante automatización de pruebas",
+    "experience.fullstack.ach3": "Implementó sistema de diseño responsivo",
+    "experience.education.title": "Licenciatura en Ciencias de la Computación",
+    "experience.education.company": "Universidad de Tecnología",
+    "experience.education.period": "2016 - 2020",
+    "experience.education.desc":
+      "Graduado con honores. Enfocado en ingeniería de software, estructuras de datos y algoritmos. Miembro activo del club de programación y participante de hackathons.",
+    "experience.education.ach1": "Promedio: 3.8/4.0",
+    "experience.education.ach2": "Ganador del hackathon universitario 2019",
+    "experience.education.ach3":
+      "Publicó investigación sobre optimización de machine learning",
+    "experience.junior.title": "Desarrollador Junior",
+    "experience.junior.company": "StartUp Studio",
+    "experience.junior.period": "2019 - 2020",
+    "experience.junior.desc":
+      "Comenzó la carrera como pasante y rápidamente promovido a desarrollador junior. Contribuyó a múltiples proyectos y aprendió prácticas modernas de desarrollo.",
+    "experience.junior.ach1":
+      "Desarrolló 3 sitios web responsivos para móviles",
+    "experience.junior.ach2": "Contribuyó a proyectos de código abierto",
+    "experience.junior.ach3": 'Recibió premio "Estrella en Ascenso"',
 
-    'title': 'William Tavares | Desarrollador de Software',
-  }
+    // Contact
+    "contact.title": "Trabajemos Juntos",
+    "contact.subtitle":
+      "¿Tienes un proyecto en mente o quieres colaborar? Me encantaría saber de ti. ¡Creemos algo increíble juntos!",
+    "contact.name": "Nombre",
+    "contact.namePlaceholder": "Tu nombre",
+    "contact.email": "Email",
+    "contact.emailPlaceholder": "tu.email@ejemplo.com",
+    "contact.message": "Mensaje",
+    "contact.messagePlaceholder": "Cuéntame sobre tu proyecto...",
+    "contact.send": "Enviar Mensaje",
+    "contact.getInTouch": "Contactar",
+    "contact.email.label": "Email",
+    "contact.phone.label": "Teléfono",
+    "contact.location.label": "Ubicación",
+    "contact.location.value": "Porto Alegre, Rio Grande do Sul, Brasil",
+    "contact.followMe": "Sígueme",
+    "contact.opportunities": "Abierto a Oportunidades",
+    "contact.opportunitiesDesc":
+      "Actualmente estoy disponible para proyectos freelance y posiciones a tiempo completo. Hablemos sobre cómo podemos trabajar juntos para dar vida a tus ideas.",
+    "contact.success": "¡Gracias por tu mensaje! Me pondré en contacto pronto.",
+
+    // Footer
+    "footer.rights": "Todos los derechos reservados.",
+    "footer.builtWith": "Hecho con",
+    "footer.using": "usando React & Tailwind CSS",
+
+    title: "William Tavares | Desarrollador de Software",
+  },
 };
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+const LanguageContext = createContext<LanguageContextType | undefined>(
+  undefined
+);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>('en');
+  const [language, setLanguage] = useState<Language>("en");
 
   const t = (key: string): string => {
     return translations[language][key] || key;
@@ -336,7 +418,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 export function useLanguage() {
   const context = useContext(LanguageContext);
   if (!context) {
-    throw new Error('useLanguage must be used within LanguageProvider');
+    throw new Error("useLanguage must be used within LanguageProvider");
   }
   return context;
 }
